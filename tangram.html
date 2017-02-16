@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>七巧板| 镜心书社</title>
+	<meta name="description" content="动态设置七巧板数组，设置好宽高，加上canvas，就能在网页上绘制出七巧板。">
+</head>
+<body>
+	<canvas id="canvas"  style="border:1px solid #aaa; display: block; margin:50px auto;">
+		
+		当前浏览器不支持Canvas，请更换浏览器后再试
+	</canvas>
+	<script>
+		var width = 600,height=600;
+		var tangram=[
+			{p: [{x: 0, y: 0}, {x: 0, y: height}, {x: width/2, y: height/2}], color: "#FF3030"},
+			{p: [{x: 0, y: 0}, {x: width, y: 0}, {x: width/2, y: height/2}], color: "#FFD700"},
+			{p: [{x: 0, y: height}, {x: width/2, y: height}, {x: width/4, y: height/4*3}], color: "#EE00EE"}, 
+			{p: [{x: width/2, y: height}, {x: width, y: height}, {x: width, y: height/2}], color: "#8B4500"},
+			{p: [{x: width/2, y: height}, {x: width/4*3, y: height/4*3}, {x: width/2, y: height/2}, {x: width/4, y: height/4*3}], color: "#87CEEB"},
+			{p: [{x: width/2, y: height/2}, {x: width/4*3, y: height/4}, {x: width/4*3, y: height/4*3}], color: "#458B00"}, 
+			{p: [{x: width, y: 0}, {x: width/4*3, y: height/4}, {x: width/4*3, y: height/4*3}, {x: width, y: height/2}], color: "#1C86EE"}
+
+		]
+
+		
+
+		window.onload=function(){
+			var canvas = document.getElementById("canvas");
+			canvas.width =width;
+			canvas.height = height;
+			var context =canvas.getContext('2d');
+			//使用context绘制
+		
+		//对七巧板数组进行一次遍历
+		    for (var i = 0; i < tangram.length; i++) {
+			
+			draw(tangram[i],context);
+		    }
+		 };
+		//draw函数
+		//形参和实参不一样要一样
+		function draw(route,ctx){
+
+			ctx.beginPath();
+			ctx.moveTo(route.p[0].x,route.p[0].y);
+			for (var i = 1; i < route.p.length; i++) {
+				var path = route.p[i];
+				ctx.lineTo(path.x,path.y);
+			}
+			ctx.closePath();
+			ctx.fillStyle = route.color;
+			ctx.fill();
+			ctx.strokeStyle ="black";
+			ctx.lineWidth= 3;
+			ctx.stroke();
+		}
+
+		
+
+
+	</script>
+</body>
+</html>
