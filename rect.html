@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弧 和 圆 | 镜心书社</title>
+</head>
+<body>
+	<canvas id="canvas" style="border:1px solid #aaa;display:block;margin:50px auto;">
+	当前浏览器不支持Canvas，请更换浏览器后再试
+	</canvas>
+
+	<script>
+		window.onload = function(){
+			var canvas =document.getElementById("canvas");
+
+			canvas.width = 1024;
+			canvas.height = 768;
+
+
+			var ctx =canvas.getContext("2d");
+			// 红色矩形
+			
+			ctx.fillStyle="#ff0000";
+			ctx.fillRect(100,100,400,400);
+			
+
+			//半透明的蓝色矩形
+			ctx.fillStyle = "rgba(0,0,255,.5)";
+			ctx.fillRect(300,300,400,400);
+			
+			//在两个矩形重叠地方清除出一个小矩形
+			ctx.clearRect(400,400,50,50);
+		}
+
+	</script>
+	
+</body>
+</html>

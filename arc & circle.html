@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弧 和 圆 | 镜心书社</title>
+</head>
+<body>
+	<canvas id="canvas" style="border:1px solid #aaa;display:block;margin:50px auto;">
+	当前浏览器不支持Canvas，请更换浏览器后再试
+	</canvas>
+
+	<script>
+		window.onload = function(){
+			var canvas =document.getElementById("canvas");
+
+			canvas.width = 1024;
+			canvas.height = 768;
+
+
+			var ctx =canvas.getContext("2d");
+
+			ctx.lineWidth = 5;
+			ctx.strokeStyle ="#005588";
+			ctx.rect(100,75,50,0, 2 * Math.PI);
+		// ctx.arc(圆心坐标x,圆心坐标y,半径,起始角,结束角)
+			ctx.stroke();
+		}
+
+	</script>
+	
+</body>
+</html>
