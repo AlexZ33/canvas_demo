@@ -2,19 +2,15 @@
 
 ## 简介
 ###rect
- 
- [方形](https://alexz33.github.io/canvas_demo/rect.html)
-####简单的轮播图效果，未做成插件
-
+####方形
+ [方形DEMO链接](https://alexz33.github.io/canvas_demo/rect.html)
 ###circles
-!(images/circles.png)
+####连续圆
 [连续圆DEMO链接](https://alexz33.github.io/canvas_demo/circles.html)
 
 ###tanggram
 ####七巧板
-
-!(images/tangram.png)
-[七巧板](https://alexz33.github.io/canvas_demo/tangram.html)
+[七巧板DEMO链接](https://alexz33.github.io/canvas_demo/tangram.html)
 
 
 ## License
