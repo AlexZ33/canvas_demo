@@ -4,29 +4,71 @@
 	<meta charset="UTF-8">
 	<title>canvas image processing | 镜心书社 </title>
 </head>
-<body>
+<body style="background-color: black">
 	<canvas id="canvas" style="display: block; margin: 0 auto;border: 1px solid #aaa;">
 	你的浏览器尚不支持canvas
+	</canvas>
+
+	<input type="range" name="" style="display: block;margin: 20px auto;width: 800px" id="scale-range"  min="0.5" max="3.0"  step="0.01" value="1.0" />
+
+	<canvas id="watermark-canvas" style="display:block;margin:0 auto;border:1px solid #aaa;">
+	您的浏览器尚不支持canvas
+		
 	</canvas>
 
 	<script type="text/javascript">
 		var canvas =document.getElementById("canvas");
 		var ctx=canvas.getContext("2d");
+		var slider=document.getElementById("scale-range");
 		var image= new Image();
+
+		var watermarkCanvas=document.getElementById("watermark-canvas");
+		var watermarkCtx=watermarkCanvas.getContext("2d");
 
 		window.onload= function(){
 
 			canvas.width=1152;
 			canvas.height=768;
 
-			image.src="";
-			image.omload=function(){
+			var scale=slider.value;
 
-				ctx.drawImage(image,0,0)
+			image.src="../images/img.jpg";
+			image.onload=function(){
 
+				drawImageByScale(scale);
+
+				slider.onmousemove=function(){
+					scale=slider.value;
+					drawImageByScale(scale);
+				}
+
+				
+				
+					//ctx.drawImage(image,0,0,canvas.width,canvas.height);
+
+					// ctx.drawImage(image,600,200,400,400,0,0,400,400)
+				
 			}
 
-		}
+		};
+
+		function drawImageByScale(scale){
+					
+					var imageWidth=canvas.width*scale;
+					var imageHeight=canvas.width*scale;
+
+					// var sx=imageWidth/2-canvas.width/2;
+					// var sy=imageHeight/2-canvas.height/2;
+
+
+					// ctx.drawImage( image , sx , sy, canvas.width , canvas.height , 0 , 0 , canvas.width , canvas.height);
+					var dx=(canvas.width-imageWidth)/2;
+					var dy=(canvas.height-imageHeight)/2;
+					ctx.clearRect(0 , 0,canvas.width,canvas.height);
+					ctx.drawImage(image,dx,dy,imageWidth,imageHeight);
+
+				}
+
 	</script>
 </body>
 </html>
