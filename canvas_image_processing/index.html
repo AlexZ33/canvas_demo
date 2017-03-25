@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas image processing | 镜心书社 </title>
+</head>
+<body>
+	<canvas id="canvas" style="display: block; margin: 0 auto;border: 1px solid #aaa;">
+	你的浏览器尚不支持canvas
+	</canvas>
+
+	<script type="text/javascript">
+		var canvas =document.getElementById("canvas");
+		var ctx=canvas.getContext("2d");
+		var image= new Image();
+
+		window.onload= function(){
+
+			canvas.width=1152;
+			canvas.height=768;
+
+			image.src="";
+			image.omload=function(){
+
+				ctx.drawImage(image,0,0)
+
+			}
+
+		}
+	</script>
+</body>
+</html>
