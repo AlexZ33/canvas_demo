@@ -16,14 +16,25 @@
       canvas.height=800;
       var ctx=canvas.getContext("2d");
 
-      ctx.lineWidth=10;
+      ctx.fillStyle="black";
+      ctx.fillRect(0,0,canvas.width,canvas.height);
+
+      ctx.lineWidth=3;
       ctx.strokeStyle="#058";
-      ctx.lineJoin="round";
-      drawStar(ctx,150,300,400,400,30);
-    
+      ctx.lineJoin="round";//miter,bevel
+      ctx.fillStyle="#fb3";
+
+      for (var i = 0; i <200; i++) {
+        var r=Math.random()*10+10;
+        var x=Math.random()*canvas.width;
+        var y=Math.random()*canvas.height;
+        var a=Math.random()*360;
+        drawStar(ctx,r,r/2.0,x,y,a);
+
+     }
       
     }
-
+//画一个五角星
     function drawStar(ctx,r,R,x,y,rot){
 
       ctx.beginPath();
@@ -32,6 +43,7 @@
         ctx.lineTo(Math.cos((54+i*72-rot)/180*Math.PI)*r+x,-Math.sin((54+i*72-rot)/180*Math.PI)*r+y);
       }
       ctx.closePath();
+      ctx.fill();
       ctx.stroke();
 
     }
