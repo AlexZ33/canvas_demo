@@ -25,7 +25,7 @@ MIT
 
 > 博客 [jxdxsw.com](http://jxdxsw.com) &nbsp;&middot;&nbsp;
 > GitHub [@AlexZ33](https://github.com/AlexZ33) &nbsp;&middot;&nbsp;
-> Weibo [@镜心书社](http://weibo.com/jxtreehouse)
-> segmentfault [@AlexZ33](https://segmentfault.com/u/alexz33)
-> Quora [@Alex Zhao](https://www.quora.com/profile/Alex-Zhao-20)
+> Weibo [@镜心书社](http://weibo.com/jxtreehouse)&nbsp;&middot;&nbsp;
+> segmentfault [@AlexZ33](https://segmentfault.com/u/alexz33)&nbsp;&middot;&nbsp;
+> Quora [@Alex Zhao](https://www.quora.com/profile/Alex-Zhao-20)&nbsp;&middot;&nbsp;
 > 微信公众号 [@镜心的小树屋](http://on891bjlf.bkt.clouddn.com/image/wechat%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7.jpg)
