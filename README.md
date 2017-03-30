@@ -1,4 +1,4 @@
-# Demos for canvas
+﻿# Demos for canvas
 
 ## 简介
 - rect.html
@@ -17,6 +17,8 @@
 
 - zhihu_background_animation.html
 [背景动画DEMO链接](http://jxdxsw.com/canvas_demo/zhihu_background_animation.html)
+- twinkling_stars
+[闪烁星星DEMO链接](http://jxdxsw.com/canvas_demo/twinkling_stars/twinkling_stars.html)
 ## License
 
 MIT
