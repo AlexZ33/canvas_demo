@@ -23,7 +23,8 @@
 
 - hand_writing
 [移动端写字面板小应用](http://jxdxsw.com/canvas_demo/hand_writing/handwriting.html)
-<br>
+
+
 ![效果](http://on891bjlf.bkt.clouddn.com/gif/handwriting.gif)
 ## License
 
