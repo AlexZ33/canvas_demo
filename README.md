@@ -1,5 +1,5 @@
 ﻿# Demos for canvas
-> 详细可查看博客[jxdxsw.com](jxdxsw.com)
+> 详细可查看博客[http://jxdxsw.com/](jxdxsw.com)
 ## 简介
 - rect.html
  [方形DEMO链接](https://alexz33.github.io/canvas_demo/rect.html)
