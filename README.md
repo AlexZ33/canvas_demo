@@ -1,5 +1,5 @@
 ﻿# Demos for canvas
-
+> 详细可查看博客jxdxsw.com
 ## 简介
 - rect.html
  [方形DEMO链接](https://alexz33.github.io/canvas_demo/rect.html)
@@ -17,8 +17,13 @@
 
 - zhihu_background_animation.html
 [背景动画DEMO链接](http://jxdxsw.com/canvas_demo/zhihu_background_animation.html)
+
 - twinkling_stars
 [闪烁星星DEMO链接](http://jxdxsw.com/canvas_demo/twinkling_stars/twinkling_stars.html)
+
+-hand_writing
+[移动端写字面板小应用](http://jxdxsw.com/canvas_demo/hand_writing/handwriting.html)
+![效果](http://on891bjlf.bkt.clouddn.com/gif/handwriting.gif)
 ## License
 
 MIT
