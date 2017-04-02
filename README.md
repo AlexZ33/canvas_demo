@@ -22,10 +22,9 @@
 [闪烁星星DEMO链接](http://jxdxsw.com/canvas_demo/twinkling_stars/twinkling_stars.html)
 
 - hand_writing
-[移动端写字面板小应用](http://jxdxsw.com/canvas_demo/hand_writing/handwriting.html)
+	- [移动端写字面板小应用](http://jxdxsw.com/canvas_demo/hand_writing/handwriting.html)
 
-
-![效果](http://on891bjlf.bkt.clouddn.com/gif/handwriting.gif)
+	- ![效果](http://on891bjlf.bkt.clouddn.com/gif/handwriting.gif)
 ## License
 
 MIT
