@@ -1,0 +1,72 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="UTF-8">  
+<title>Insert title here</title>  
+<style>  
+canvas {  
+    width: 400px;  
+    height: 400px;  
+    background-color: #EEEEEE;  
+}  
+</style>  
+<script>  
+    window.onload = function() {  
+        var canvas = document.getElementById('canvas');  
+        var arcToPoint1 = {x:120, y:40};  
+        var arcToPoint2 = {x:60, y:80}  
+        var context = canvas.getContext('2d');  
+        if (!canvas || !canvas.getContext) {  
+            return;  
+        } else {  
+            timer = setInterval(function(){  
+                if (arcToPoint2.x < 150) {  
+                    arcTo (context, arcToPoint1, arcToPoint2);  
+                    arcToPoint2.x += 2;  
+                } else {  
+                    clearInterval(timer);  
+                }  
+            }, 300);  
+        }  
+    }  
+      
+    function arcTo () {  
+        var startPoint = {x: 20, y: 40};  
+        var context = arguments[0];  
+        var arcToPoint1 = arguments[1];  
+        var arcToPoint2 = arguments[2];  
+        var context = canvas.getContext('2d');  
+          
+        context.clearRect(0,0,context.canvas.width, context.canvas.height)  
+          
+        context.beginPath();  
+        context.moveTo(startPoint.x, startPoint.y);  
+        context.strokeStyle = "red";  
+        context.lineWidth = 1;  
+        context.arcTo(arcToPoint1.x, arcToPoint1.y, arcToPoint2.x, arcToPoint2.y, 40);  
+        context.stroke();  
+          
+        context.beginPath();  
+        context.moveTo(startPoint.x, startPoint.y);  
+        context.strokeStyle = "black";  
+        context.lineWidth = 1;  
+        context.lineTo(arcToPoint1.x, arcToPoint1.y);  
+        context.fillText('arcToPoint1', arcToPoint1.x + 10, arcToPoint1.y - 5)   
+        context.stroke();  
+          
+        context.beginPath();  
+        context.moveTo(arcToPoint1.x, arcToPoint1.y);  
+        context.strokeStyle = "black";  
+        context.lineWidth = 1;  
+        context.lineTo(arcToPoint2.x, arcToPoint2.y);  
+        context.fillText('arcToPoint2', arcToPoint2.x + 10, arcToPoint2.y + 10)   
+        context.stroke();  
+    }  
+</script>  
+</head>  
+<body>  
+    <canvas id="canvas">  
+        此游览器不支持canvas标签  
+    </canvas>  
+</body>  
+</html>  
