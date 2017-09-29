@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+    var canvas = document.createElement('canvas'),
+    context = canvas.getContext('2d'),
+    cw = 800, ch = 500,
+    toggle = true
+
+	canvas.width = cw
+	canvas.height = ch
+
+	function generateNoise(context) {
+	  var imageData = context.createImageData(cw, ch),
+	  buffer32 = new Uint32Array(imageData.data.buffer),
+	  len = buffer32.length,
+	  i = 0
+
+	  for(; i < len;)
+	    buffer32[i++] = ((255 * Math.random())|0) << 24
+
+	  context.putImageData(imageData, 0, 0)
+	}
+
+	;(function loop() {
+	  toggle = !toggle
+	  if (toggle) {
+	    requestAnimationFrame(loop)
+	    return
+	  }
+	  generateNoise(context)
+	  requestAnimationFrame(loop)
+	})()
+
+	document.body.appendChild(canvas)
+	</script>
+</body>
+</html>

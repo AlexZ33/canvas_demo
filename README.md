@@ -1,5 +1,6 @@
 ﻿# Demos for canvas
 > 详细可查看博客[http://jxdxsw.com/](jxdxsw.com)
+> [Canvas教程](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial)
 ## 简介
 - rect.html
  [方形DEMO链接](https://alexz33.github.io/canvas_demo/rect.html)

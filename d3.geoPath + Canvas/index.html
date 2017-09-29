@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>
+d3.geoPath + Canvas</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<canvas width="1920" height="800"></canvas>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src="https://unpkg.com/topojson-client@3"></script>
+	<script>
+		var context = d3.select("canvas").node().getContext("2d"),
+		    path = d3.geoPath().context(context);
+
+		d3.json("world-50m.json",function(err,world) {
+			if(err) throw err;
+
+			context.beginPath;
+			path(topojson.mesh(world));
+			context.stroke();
+		});
+	</script>
+</body>
+</html>
