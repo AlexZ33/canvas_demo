@@ -6,6 +6,7 @@
  [方形DEMO链接](https://alexz33.github.io/canvas_demo/rect.html)
 - circles.html
 [连续圆DEMO链接](https://alexz33.github.io/canvas_demo/circles.html)
+https://oldj.github.io/fe-demo/pages/dot-line/index.html
 
 - tanggram.html
 [七巧板DEMO链接](https://alexz33.github.io/canvas_demo/tangram.html)
